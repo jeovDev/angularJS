@@ -1,0 +1,36 @@
+.card-container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 900px;
+  display: grid;
+  margin-bottom: 20px;
+  font-size: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0px 15px 0px 15px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+ul li {
+  float: left;
+  margin-right: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+ul li:hover {
+  color: red;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}/*# sourceMappingURL=style.css.map */

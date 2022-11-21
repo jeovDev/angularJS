@@ -1,0 +1,18 @@
+<div ng-controller="dataController">
+    <label for="search"> search</label>
+    <input type="text" ng-model="search">
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Status</th>
+        </tr>
+        <tr ng-repeat="emp in employees | filter : search">
+            <td>{{emp.firstname}}</td>
+            <td>{{emp.lastname}}</td>
+            <td>{{emp.Age}}</td>
+            <td>{{emp.status}}</td>
+        </tr>
+    </table>
+</div>
