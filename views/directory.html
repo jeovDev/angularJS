@@ -1,12 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>directory</h1>
-</body>
-</html>
+
+    <form ng-submit="submitForm()">
+    
+        <label for="firstname">Asteroid</label>
+        <input type="text" ng-model="newfirstname">
+  
+        <label for="Lastname">Distance</label>
+        <input type="text" ng-model="newlastname">
+  
+        <label for="age">Time of Impact</label>
+        <input type="number" ng-model="newage">
+  
+        <label for="firstname">Location Of Impact</label>
+        <select ng-model="newstatus">
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+        </select>
+  
+        <button>Submit</button>
+
+        <div >
+            <label for="search"> search</label>
+            <input type="text" ng-model="search">
+            <table>
+                <tr>
+                    <th>Asteroid</th>
+                    <th>Distance</th>
+                    <th>Time of Impact</th>
+                    <th>Location Of Impact</th>
+                </tr>
+                <tr ng-repeat="emp in employees | filter : search">
+                    <td>{{emp.firstname}}</td>
+                    <td>{{emp.lastname}}</td>
+                    <td>{{emp.Age}}</td>
+                    <td>{{emp.status}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+   
+
+</form>
+
+

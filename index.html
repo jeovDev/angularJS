@@ -2,6 +2,7 @@
 <html lang="en" ng-app="applications">
 
 <head>
+    <base href="/" />
     <title>Page Title</title>
     <link rel="stylesheet" href="./Styles/style.css" />
     <script src="controllers\angular.min.js"></script>
@@ -12,17 +13,23 @@
 <body>
 
 
-    <!-- <div ng-include="'templates/form.html'"></div> -->
-    <!-- <div ng-include="'./templates/table.html'"></div> -->
+    <!-- <div ng-include="'templates/form.html'"></div>  -->
+ <!-- //<div ng-include="'./templates/table.html'"></div> -->
 
-
+  
     <header>
         <div class="logo">
-            LOGO
+            <img src="./images/nasa.png" style="width:25px ;"/>
+            <div> NASA Satellite Asteroid Detector</div>
+           
         </div>
         <ul>
-            <li>HOME</li>
-            <li>LIST</li>
+            <li>              
+                <a href="#!/home">HOME</a>
+            </li>
+            <li>
+                <a href="#!/directory">LIST</a>
+                </li>
             <li>ABOUT</li>
         </ul>
     </header>

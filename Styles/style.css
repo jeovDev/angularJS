@@ -16,6 +16,9 @@ header {
 
 .logo {
   cursor: pointer;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
 }
 
 ul li {

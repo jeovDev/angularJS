@@ -1,12 +1,14 @@
+// const angular = require("angular");
+
 var application = angular.module("applications", ['ngRoute']);
 
-application.config(['$routeProvider', function($routeProvider){
+application.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider){
   $routeProvider
   .when('/home', {
     templateUrl : 'views/home.html'
   })
   .when('/directory', {
-    templateUrl : 'views/directory',
+    templateUrl : 'views/directory.html',
     controller : 'dataController'
   })
   .otherwise({
@@ -14,9 +16,9 @@ application.config(['$routeProvider', function($routeProvider){
   });
 }]);
 
-application.controller("dataController.html", [
-  "$scope",
-  function ($scope) {
+application.controller("dataController", [
+  "$scope","$http",
+  function ($scope,$http) {
     $scope.submitForm = function () {
      
         $scope.employees.push(
@@ -34,20 +36,27 @@ application.controller("dataController.html", [
         $scope.newstatus = "";
     
     };
+ 
+$http.get('data/employees.json').then(function(response){
+  $scope.employees = response.data;
+  console.log(response.data);
+});
 
-    $scope.employees = [
-      {
-        firstname: "Jane",
-        lastname: "doe",
-        Age: 22,
-        status: "married",
-      },
-      {
-        firstname: "Jeovanne",
-        lastname: "Lugo",
-        Age: 28,
-        status: "single",
-      },
-    ];
+    // $scope.employees = [
+    //   {
+    //     firstname: "Jane",
+    //     lastname: "doe",
+    //     Age: 22,
+    //     status: "married",
+    //   },
+    //   {
+    //     firstname: "Jeovanne",
+    //     lastname: "Lugo",
+    //     Age: 28,
+    //     status: "single",
+    //   },
+     
+    // ];
+    // console.log(angular.toJson($scope.employees));
   },
 ]);

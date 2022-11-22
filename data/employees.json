@@ -1,0 +1,13 @@
+[{
+    "firstname":"Jane",
+    "lastname":"doe",
+    "Age":22,
+    "status":"married"
+ },
+ {
+    "firstname":"Jeovanne",
+    "lastname":"Lugo",
+    "Age":28,
+    "status":"single"
+    
+}]
